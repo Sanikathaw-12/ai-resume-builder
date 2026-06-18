@@ -1,0 +1,19 @@
+# Python venv
+backend/resume/Lib/
+backend/resume/Scripts/
+backend/resume/Include/
+backend/resume/pyvenv.cfg
+backend/resume/__pycache__/
+*.pyc
+
+# Secrets
+.env
+backend/resume/.env
+
+# Node
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+
+# General
+.DS_Store
