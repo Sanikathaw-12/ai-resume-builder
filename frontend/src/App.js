@@ -34,7 +34,7 @@ const featureList = [
 
 const callApi = async (endpoint, body) => {
   try {
-    const res = await fetch(`http://127.0.0.1:8000${endpoint}`, {
+    const res = await fetch(`https://ai-resume-builder-api-1a1m.onrender.com${endpoint}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
@@ -181,7 +181,7 @@ export default function App() {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      const res = await fetch("http://127.0.0.1:8000/parse-resume", { method: "POST", body: formData });
+      const res = await fetch("https://ai-resume-builder-api-1a1m.onrender.com/parse-resume", { method: "POST", body: formData });
       if (!res.ok) throw new Error("Server error");
       const data = await res.json();
       setResumeText(data.resume_text);
